@@ -1,7 +1,6 @@
 import random
 
 
-
 def play_game():
 
     comNum = random_number()
@@ -12,7 +11,7 @@ def play_game():
 
     while True:
 
-        usernum = int(input("Please enter a number: "))
+        usernum = get_guess()
 
         if usernum == comNum:
             print ("Congratualations, you win!")
@@ -24,7 +23,7 @@ def play_game():
         elif usernum < comNum:
             print ("Too low, guess again")
 
-    print ("Thanks for playing")
+    #print ("Thanks for playing")
 
 
 
@@ -33,3 +32,13 @@ def random_number():
     number = random.randint(0,21)
 
     return number
+
+def get_guess():
+
+    usernum = int(input("Please enter a number: "))
+
+    return usernum
+
+
+if __name__ == '__main__':
+    play_game()
